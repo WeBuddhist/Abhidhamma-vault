@@ -53,6 +53,14 @@ status: draft
         - [[#Abyākataniddeso]] ^toc-6-2-8
         - [[#Avijjāmūlakakusalaniddeso]] ^toc-6-2-9
         - [[#Kusalamūlakavipākaniddeso]] ^toc-6-2-10
+- [[#Satipaṭṭhānavibhaṅgo]] ^toc-7
+    - [[#Suttantabhājanīyaṃ (Satipaṭṭhāna)]] ^toc-7-1
+        - [[#Kāyānupassanāniddeso]] ^toc-7-1-1
+        - [[#Vedanānupassanāniddeso]] ^toc-7-1-2
+        - [[#Cittānupassanāniddeso]] ^toc-7-1-3
+        - [[#Dhammānupassanāniddeso]] ^toc-7-1-4
+    - [[#Abhidhammabhājanīyaṃ (Satipaṭṭhāna)]] ^toc-7-2
+    - [[#Pañhāpucchakaṃ (Satipaṭṭhāna)]] ^toc-7-3
 
 ## Khandhavibhaṅgo
 
@@ -486,3 +494,120 @@ Idāni abyākatesupi apareneva nayena paccayākāraṃ dassetuṃ "katame dhamm�
 [[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-854]]
 [[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-855]]
 [[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-861]]
+
+## Satipaṭṭhānavibhaṅgo
+
+[[#^toc-7|↑↑↑]]
+
+Paṭiccasamuppādavibhaṅgānantaraṃ satipaṭṭhānavibhaṅgo āraddho. Tattha "cattāro"ti gaṇanaparicchedo; tena na tato heṭṭhā na uddhanti satipaṭṭhānaparicchedo dīpito. Satipaṭṭhānasaddo pana tīsu atthesu dissati – satigocare, tidhā paṭipannesu sāvakesu satthuno paṭighānunayavītivattatāyaṃ, satiyañca; idha pana "sati ca sā paṭṭhānañcā"ti satiyeva adhippetā, ārammaṇabhedena pana tāsaṃ satīnaṃ bahuttā bahuvacanaṃ kataṃ. Cattārova ca vuttā anūnā anadhikā veneyyahitattā – taṇhācaritadiṭṭhicaritasamathayānikavipassanāyānikānaṃ mandatikkhabhedena dvidhā pavattānaṃ yathānurūpaṃ visuddhimaggadassanato – subhasukhaniccaattavipallāsānañca pahānatthaṃ, caturoghayogāsavaganthupādānaagatippahānatthaṃ catubbidhāhārapariññatthañca. Aṭṭhakathānayena pana saraṇavasena ekattasamosaraṇavasena ca ekameva satipaṭṭhānaṃ, ārammaṇavasena cattāro; yathā hi catudvāre nagare catūhi disāhi āgacchantā sakasakadisāya uṭṭhānakaṃ bhaṇḍaṃ gahetvā ekaṃyeva nagaraṃ pavisanti, evaṃ cuddasavidhaṃ kāyānupassanaṃ, navavidhaṃ vedanānupassanaṃ, soḷasavidhaṃ cittānupassanaṃ, pañcavidhaṃ dhammānupassanaṃ bhāvetvā tadanubhāvanibbattena ariyamaggena ekaṃyeva nibbānaṃ osaranti.
+
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-865]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-866]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-867]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-868]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-869]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-870]]
+
+### Suttantabhājanīyaṃ (Satipaṭṭhāna)
+
+[[#^toc-7-1|↑↑↑]]
+
+Uddesavāre "idha bhikkhū"ti ālapanaṃ bhikkhūnaṃ aggaparisabhāvato paṭipattiyā ca bhikkhubhāvadassanato kataṃ; yo hi imaṃ paṭipattiṃ paṭipajjati, so devo vā hotu manusso vā, bhikkhūti saṅkhaṃ gacchatiyeva. Ajjhattaṃ kāyeti attano kāye, bahiddhāti parassa kāye, ajjhattabahiddhāti kālena attano kālena parassa kāye; ajjhattabahiddhā ghaṭitārammaṇaṃ nāma natthi, paguṇakammaṭṭhānassa pana aparāparaṃ sañcaraṇakālo ettha kathito. "Kāye kāyānupassī"ti dutiyaṃ kāyaggahaṇaṃ asammissato vavatthānaghanavinibbhogādidassanatthaṃ kataṃ – rathasambhārānupassako viya aṅgapaccaṅgasamūhānupassī, nagarāvayavānupassako viya kesalomādisamūhānupassī hoti; na hettha yathāvuttasamūhavinimutto kāyo vā itthī vā puriso vā añño vā koci dhammo dissati. Ātāpīti tīsu bhavesu kilesānaṃ ātāpanato ātāpoti laddhanāmena vīriyena, sampajānoti pariggāhakena ñāṇena, satimāti pariggāhikāya satiyā samannāgato; anātāpino hi antosaṅkhepo antarāyakaro hoti, asampajāno upāyapariggahe sammuyhati, muṭṭhassati ca asamattho hotīti etehi vinā kammaṭṭhānaṃ na sampajjati. "Vineyya loke abhijjhādomanassa"nti pahānaṅgaṃ vuttaṃ; abhijjhāgahaṇena kāmacchando, domanassaggahaṇena byāpādo saṅgahaṃ gacchatīti balavanīvaraṇadvayadassanena nīvaraṇappahānaṃ vuttaṃ hoti. Vedanācittadhammānupassanuddesesupi ajjhattādīni eteneva nayena veditabbāni; tā ca vedanā lokiyāva, tathā cittaṃ dhammā ca.
+
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-871]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-873]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-874]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-880]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-881]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-882]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-884]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-885]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-888]]
+
+#### Kāyānupassanāniddeso
+
+[[#^toc-7-1-1|↑↑↑]]
+
+Niddesavāre bhagavā cheko vilīvakārako viya ekaṃ mahāveḷuṃ labhitvā nānāupakaraṇāni karonto ajjhattabahiddhābhedena tividhaṃ kāyapariggahaṃ vitthārento "uddhaṃ pādatalā adho kesamatthakā tacapariyantaṃ pūraṃ nānappakārassa asucino"ti dvattiṃsākārakammaṭṭhānaṃ dassesi. Ācariyena cettha vacasā manasā vaṇṇato saṇṭhānato disato okāsato paricchedatoti sattadhā uggahakosallaṃ, anupubbato nātisīghato nātisaṇikato vikkhepapaṭibāhanato paṇṇattisamatikkamanato anupubbamuñcanato lakkhaṇato tayo ca suttantāti dasadhā manasikārakosallaṃ ācikkhitabbaṃ. Koṭṭhāsesu paguṇesu tīsu mukhesu ekena mukhena kammaṭṭhānaṃ vimuccati – vaṇṇato manasikaroto nīlapītalohitodātavasena cattāri vaṇṇakasiṇāni, paṭikūlato manasikaroto paṭikūlārammaṇaṃ paṭhamajjhānaṃ uppajjati, dhātuto pana "acetanā abyākatā suññā"ti manasikaroto kesādīnaṃ acetanabhāvadassanena nāmarūpavavatthānaṃ hoti; tato sahetusappaccayaṃ nāmarūpaṃ passanto tīsu addhāsu kaṅkhaṃ vitaritvā ñātapariññāya cūḷasotāpanno hutvā vipassanāpaṭipāṭiyā arahattaṃ gaṇhāti. Vinicchayo cettha nimittato saṭṭhisataṃ, lakkhaṇato aṭṭhavīsatisataṃ, dhātuto aṭṭhavīsatisataṃ, suññato channavuti suññatāti evaṃ veditabbo. "Sveva kāyo loko"ti yasmiṃ kāye kāyānupassī viharati, sveva lujjanapalujjanaṭṭhena loko vutto. Imasmiṃ pana pabbe samathavipassanā ubhayampi kathitaṃ.
+
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-890]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-892]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-896]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-903]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-976]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-977]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-986]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-989]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1007]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1010]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1018]]
+
+#### Vedanānupassanāniddeso
+
+[[#^toc-7-1-2|↑↑↑]]
+
+Vedanānupassanāniddese "sukhaṃ vedanaṃ vedayāmī"ti pajānanaṃ na uttānaseyyakadārakānaṃ viya sattūpaladdhiavijahanakaṃ jānanaṃ adhippetaṃ, atha kho "ko vedayati, kassa vedanā, kiṃ kāraṇā vedanā"ti sampajānavediyanaṃ; na hi koci satto vā puggalo vā vedayati, vatthuṃ pana ārammaṇaṃ katvā vedanāva vedayati, taṃ vedanāpavattiṃ upādāya "ahaṃ vedayāmī"ti vohāramattaṃ hoti – yathā taṃ cittalapabbate balavavedanaṃ adhivāsetvā sahapaṭisambhidāhi arahattaṃ patto thero. Iti bhagavā rūpakammaṭṭhānaṃ kathetvā arūpakammaṭṭhānaṃ kathento vedanāvasena kathesi; tividho hi arūpe abhiniveso phassavasena vedanāvasena cittavasenāti, tesu ca yassa yaṃ pākaṭaṃ, so phassapañcamake dhamme pariggaṇhitvā vatthunissitabhāvaṃ ñatvā nāmarūpaṃ passati, "avijjādihetukā"ti paccayaṃ vavatthapetvā tilakkhaṇaṃ āropetvā arahatte patiṭṭhāti. Vedanāvasena pana kathitaṃ pākaṭaṃ hoti vedanānaṃ uppattipākaṭatāya; adukkhamasukhā pana duddīpanā, sā sukhadukkhānaṃ apagame sātāsātapaṭikkhepavasena majjhattākārabhūtāti nayato gaṇhantasseva pākaṭā hoti – piṭṭhipāsāṇassa orabhāge aparabhāge ca padaṃ disvā majjhe apassantopi "iminā padesena gato"ti nayato jānanto migaluddako viya. Sāmisā nirāmisā cettha cha gehassita cha nekkhammassitavasena veditabbā. Imasmiṃ pabbe suddhavipassanāva kathitā.
+
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1021]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1022]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1023]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1024]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1025]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1027]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1028]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1029]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1030]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1034]]
+
+#### Cittānupassanāniddeso
+
+[[#^toc-7-1-3|↑↑↑]]
+
+Cittānupassanāniddese sarāganti aṭṭhavidhaṃ lobhasahagataṃ, vītarāganti lokiyakusalābyākataṃ; yasmā panidaṃ sammasanaṃ, na dhammasamodhānaṃ, tasmā ettha ekapadepi lokuttaraṃ na labbhati. Sadosanti duvidhaṃ domanassasahagataṃ, vītadosanti lokiyakusalābyākataṃ. Samohanti vicikicchāsahagatañceva uddhaccasahagatañcāti duvidhaṃ; yasmā pana moho sabbākusalesu uppajjati, tasmā imasmiṃyeva duke dvādasākusalacittāni pariyādiṇṇāni. Saṃkhittanti thinamiddhānupatitaṃ saṅkuṭitacittaṃ, vikkhittanti uddhaccasahagataṃ pasaṭacittaṃ. Mahaggatanti rūpāvacaraṃ arūpāvacarañca, amahaggatanti kāmāvacaraṃ; sauttaranti kāmāvacaraṃ, anuttaranti rūpārūpāvacaraṃ, tatrāpi sauttaraṃ rūpāvacaraṃ, anuttaraṃ arūpāvacarameva. Samāhitanti yassa appanāsamādhi upacārasamādhi vā atthi, asamāhitanti ubhayasamādhivirahitaṃ. Vimuttanti tadaṅgavikkhambhanavimuttīhi vinimuttaṃ; samucchedapaṭippassaddhinissaraṇavimuttīnaṃ pana idha okāsova natthi. Imasmimpi pabbe suddhavipassanāva kathitā.
+
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1036]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1037]]
+
+#### Dhammānupassanāniddeso
+
+[[#^toc-7-1-4|↑↑↑]]
+
+Yasmā kāyānupassanāya rūpakkhandhapariggaho, vedanānupassanāya vedanākkhandhapariggaho, cittānupassanāya viññāṇakkhandhapariggahova kathito, tasmā idāni sampayuttadhammasīsena saññāsaṅkhārakkhandhapariggahampi kathetuṃ dhammānupassanā dassitā. Nīvaraṇapabbe santaṃ abhiṇhasamudācāravasena, asantaṃ asamudācāravasena vā pahīnattā vā avijjamānaṃ; tattha subhanimitte ayonisomanasikārena kāmacchandassa, paṭighanimitte byāpādassa, aratitandivijambhikābhattasammadacetasolīnattesu thinamiddhassa, cetaso avūpasame uddhaccakukkuccassa, vicikicchāṭhānīyesu dhammesu vicikicchāya uppādo; asubhanimitte pana, mettāya cetovimuttiyā, ārambhanikkamaparakkamadhātūsu, cetaso vūpasame, kusalākusalādidhammesu ca yonisomanasikārena tesaṃ pahānaṃ. Cha cha dhammā ca ekamekassa pahānāya saṃvattanti, sabbattha kalyāṇamittatā sappāyakathā ca antogadhā; āyatiṃ anuppādo pana kāmacchandathinamiddhauddhaccānaṃ arahattamaggena, byāpādakukkuccānaṃ anāgāmimaggena, vicikicchāya sotāpattimaggena hoti. Bojjhaṅgapabbe santaṃ paṭilābhavasena, asantaṃ appaṭilābhavasena; satisambojjhaṅgassa cattāro, dhammavicayassa satta, vīriyassa ekādasa, pītiyā ekādasa, passaddhiyā satta, samādhissa ekādasa, upekkhāya pañca dhammā uppādāya saṃvattanti, sabbesañca bhāvanāpāripūri arahattamaggena hoti; visesato cettha vatthuvisadakiriyā indriyasamattapaṭipādanā ca vuttā – saddhāpaññānaṃ samādhivīriyānañca samatā pasatthā, sati pana loṇadhūpanaṃ viya sabbabyañjanesu sabbattha icchitabbā. Imesu dvīsu pabbesu suddhavipassanāva kathitā. Ime pana cattāro satipaṭṭhānā pubbabhāge nānācittesu labbhanti, lokuttaramaggakkhaṇe pana ekāva maggasampayuttā sati catukiccasādhanaṭṭhena cattāri nāmāni labhatīti ekacitteyeva labbhanti.
+
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1039]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1040]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1042]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1046]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1051]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1056]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1061]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1066]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1070]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1074]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1077]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1078]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1092]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1097]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1100]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1106]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1112]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1114]]
+
+### Abhidhammabhājanīyaṃ (Satipaṭṭhāna)
+
+[[#^toc-7-2|↑↑↑]]
+
+Abhidhammabhājanīye lokuttarasatipaṭṭhānavasena desanāya āraddhattā yathā kāyādiārammaṇesu lokiyasatipaṭṭhānesu tanti ṭhapitā, na tathā idha; atha kho sabbānipi kāyānupassanādīni satipaṭṭhānāni dhammasaṅgaṇiyaṃ vibhattassa desanānayassa mukhamattameva dassentena niddiṭṭhāni. Nayabhedo panettha evaṃ veditabbo – kāyānupassanāya sotāpattimagge jhānābhinivese suddhikapaṭipadā, suddhikasuññatā, suññatapaṭipadā, suddhikaappaṇihitaṃ, appaṇihitapaṭipadāti imesu pañcasu ṭhānesu dvinnaṃ dvinnaṃ catukkapañcakanayānaṃ vasena dasa nayā; evaṃ vīsatiyā abhinivesesu dve nayasatāni, tāni catūhi adhipatīhi catuguṇitāni aṭṭha satāni, iti suddhikāni dve sādhipatīni aṭṭhāti nayasahassaṃ. Tathā vedanānupassanādīsu suddhikasatipaṭṭhāne cāti sotāpattimagge pañca nayasahassāni; yathā ca sotāpattimagge, evaṃ sesamaggesūti kusale vīsati nayasahassāni, suññatāppaṇihitānimittabhedesu tato tiguṇe vipāke saṭṭhi nayasahassāni. Iti kusale pañcannaṃ vipāke pañcannanti dasannaṃ niddesavārānaṃ vasena dasappabhedo asītinayasahassapatimaṇḍito abhidhammabhājanīyaniddeso.
+
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1116]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1117]]
+
+### Pañhāpucchakaṃ (Satipaṭṭhāna)
+
+[[#^toc-7-3|↑↑↑]]
+
+Pañhāpucchake pāḷianusāreneva satipaṭṭhānānaṃ kusalādibhāvo veditabbo. Ārammaṇattikesu pana sabbānipi etāni appamāṇaṃ nibbānaṃ ārabbha pavattanato appamāṇārammaṇāneva, na maggārammaṇāni; sahajātahetuvasena pana maggahetukāni; vīriyaṃ vā vīmaṃsaṃ vā jeṭṭhakaṃ katvā maggabhāvanākāle maggādhipatīni; chandacittajeṭṭhakāya pana maggabhāvanāya phalakāle ca navattabbāni; atītādīsu ekārammaṇabhāvenapi navattabbāni; nibbānassa bahiddhādhammattā bahiddhārammaṇāni nāma honti. Evaṃ imasmiṃ pañhāpucchake nibbattitalokuttarāneva satipaṭṭhānāni kathitāni; suttantabhājanīyasmiṃyeva hi sammāsambuddhena lokiyalokuttaramissakā satipaṭṭhānā kathitā, abhidhammabhājanīyapañhāpucchakesu pana lokuttarāyeva. Evamayaṃ satipaṭṭhānavibhaṅgopi teparivaṭṭaṃ nīharitvā bhājetvā dassito.
+
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1118]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1119]]
+[[1-SOURCES/Commentaries/pi-vibhanga-atthakatha#^2-1120]]
