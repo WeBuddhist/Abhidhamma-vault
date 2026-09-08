@@ -2,46 +2,58 @@
 
 ## Audience
 
-Readers with little or no Buddhist background.
+Adult **general readers** with little or no Buddhist background — curious laypeople, first-time readers of Buddhist texts.
+
+**English is their second or third language** — not their main language. They can read everyday English, but they are **not** native English readers.
+
+**Assume they:**
+
+* read clear nonfiction or news-style English on familiar topics
+* do not know Pāli, Abhidhamma categories, or monastic vocabulary
+
+**Do not assume they:** have native fluency, enjoy dense literary English, meditate, study suttas, or know terms like khandha, cetasika, or nidāna.
 
 ---
 
 ## Translation Goal
 
-Make the text understandable without prior knowledge of Buddhist terminology.
+Make the text **understandable on first read** without prior Buddhist knowledge — plain, respectful English suited to an **adult L2/L3 reader**, not native literary style.
 
 ---
 
 ## Terminology
 
-Prefer understandable English over technical vocabulary.
+Prefer understandable English over technical vocabulary. For each doctrinal sense, pick **one** rendering and reuse it **every time** that sense appears.
 
-For terms covered by `pali-english/audience_requirments/termbase/termbase-pi-1-audience_general_readers.md`, use the **Translation** column, keyed by **Sense Tag**. Every occurrence of the same Sense Tag must use identical wording.
+### Word-choice rules (general readers)
 
-Examples (lemma, Sense Tag → General Translation):
+| Rule | Do | Don't |
+| ---- | -- | ----- |
+| English level | Clear, common words; short sentences | Idioms, colloquialisms, rare vocabulary, long nested clauses |
+| Register | Plain modern English; one plain phrase per sense | Academic Buddhist Studies diction |
+| Abhidhamma | Accessible paraphrase ("mental state", "conditioned thing") | Untranslated technical lists |
+| Pāli loans | Retain only widely known terms: **Buddha**, **Dhamma**, **Nibbāna** | Rare or unexplained loanwords |
+| Distinctions | Keep different Sense Tags distinct in English | Merging senses to reduce vocabulary |
 
-* citta, `mind` → mind
-* vedanā, `feeling_aggregate` → felt experience (pleasant, unpleasant, or neutral)
-* saṅkhāra, `volitional_formations` → mental formations / volitional activities
-* dhamma, `phenomenon` → mental or physical phenomenon
-* dhamma, `teaching` → the Buddha's teaching
-* kilesa, `defilement` → unwholesome mental state
+### Examples (lemma, sense → rendering)
 
-For lemmas not yet in the termbase (e.g. saññā → perception, taṇhā → craving), choose a clear, accessible rendering and reuse it consistently for that sense throughout.
+* citta, `mind_heart` → mind
+* vedanā, `pleasant_unpleasant` → felt experience (pleasant, unpleasant, or neutral)
+* saṅkhāra, `mental_formation` → mental formations / volitional activities
+* dhamma, `matter_thing` → mental or physical phenomenon
+* dhamma, `teaching_discourse` → the Buddha's teaching
+* kilesa, `defilement_impurity_unwholesome` → unwholesome mental state
 
-Retain only highly established Buddhist terms:
-
-* Dhamma
-* Nibbāna
-* Buddha
+For other doctrinal terms (e.g. saññā → perception, taṇhā → craving), choose a clear rendering and reuse it consistently.
 
 ---
 
 ## Style
 
-* Clear
-* Modern
-* Natural English
+* **Clear**, **modern**, straightforward English
+* **Short to medium** sentences; one main idea per sentence when possible
+* Readable prose for an **international** audience — not a glossary, not a commentary, not native-only idioms
+* **Consistent** terminology — same sense, same English word every time
 
 ---
 
@@ -55,7 +67,7 @@ Do not add information absent from the source.
 
 ## Priority
 
-1. Understanding
-2. Accuracy
-3. Readability
-4. Consistency
+1. **Understanding** for a non-specialist
+2. **Accuracy**
+3. **Readability**
+4. **Consistency** of terms

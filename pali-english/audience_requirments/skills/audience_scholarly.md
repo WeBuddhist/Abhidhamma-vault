@@ -2,65 +2,68 @@
 
 ## Audience
 
-* Buddhist Studies researchers
-* Pāli scholars
-* Translators
-* Graduate students
-* Academic readers
+**Specialist readers** in Buddhist Studies and Pāli translation:
+
+* researchers and graduate students
+* Pāli scholars and professional translators
+* academic readers familiar with technical Buddhist English
+
+**Assume they:** know Abhidhamma categories, aggregate theory, standard BS English (khandha, cetasika, āyatana, etc.) and care about **terminological precision**.
 
 ---
 
 ## Translation Goal
 
-Maximize doctrinal precision and terminological consistency.
-
-Assume readers are familiar with Buddhist technical vocabulary.
+Maximize **doctrinal precision** and **terminological consistency** with Buddhist Studies convention. Minimize interpretive smoothing.
 
 ---
 
 ## Terminology
 
-Use the **Translation** column from `pali-english/audience_requirments/termbase/termbase-pi-1-audience_scholarly.md` exactly as provided.
+Use standard Buddhist Studies English. For each doctrinal sense, pick the **most precise** rendering and reuse it **every time** that sense appears — no variation.
 
-For every occurrence of a Pāli lemma, identify the correct sense by **Sense Tag** (using context and Domain), and render it with that sense's Translation — every single time, with no variation in wording for the same Sense Tag.
+### Word-choice rules (scholarly)
 
-Examples (lemma, Sense Tag → Translation):
+| Rule | Do | Don't |
+| ---- | -- | ----- |
+| Register | Standard Buddhist Studies English | Paraphrase for "accessibility" |
+| Synonym pick | Most **precise** term from the glossary Sense cluster | Child-friendly or devotional substitutes |
+| Distinctions | Preserve every Sense Tag distinction | Collapse related senses |
+| Capitalization | **Dhamma**, **Nibbāna** per scholarly convention | Casual lowercasing of technical terms |
 
-* dhamma, `phenomenon` → phenomenon
-* dhamma, `teaching` → Dhamma
-* dhamma, `inherent_quality` → quality
-* vedanā, `feeling_aggregate` → feeling
-* citta, `mind` → mind
+### Examples (lemma, sense → rendering)
+
+* dhamma, `matter_thing` → phenomenon
+* dhamma, `teaching_discourse` → Dhamma
+* dhamma, `mental_states` → mental state
+* vedanā, `pleasant_unpleasant` → feeling
+* citta, `mind_heart` → mind
 * citta, `thought_intention` → thought
-* saṅkhāra, `volitional_formations` → formations
-* viññāṇa, `consciousness_aggregate` → consciousness
-* rūpa, `materiality_aggregate` → materiality
+* saṅkhāra, `mental_formation` → formations
+* viññāṇa, `awareness_consciousness` → consciousness
+* rūpa, `matter_material` → materiality
 
-Do not simplify terminology.
+For other doctrinal terms, choose a precise scholarly rendering and reuse it for every occurrence of that sense.
 
-If a lemma/sense is not yet in the termbase, choose a precise scholarly rendering consistent with Rule 8 of `Pāli Termbase Extraction Prompt.md`, and use that same rendering for every later occurrence of the same sense.
+**Do not simplify terminology.**
 
 ---
 
 ## Style
 
-* Formal
-* Precise
-* Technical
-* Minimal interpretation
+* **Formal**, **precise**, **technical**
+* **Minimal interpretation** — render sense, do not preach or explain
 
 ---
 
 ## Explanatory Additions
 
-Do not add explanations.
-
-Do not paraphrase technical terms.
+None. Do not add explanations or paraphrase technical terms in the translation.
 
 ---
 
 ## Priority
 
-1. Accuracy
-2. Consistency
-3. Readability
+1. **Accuracy**
+2. **Terminological consistency**
+3. **Readability** (secondary to precision)

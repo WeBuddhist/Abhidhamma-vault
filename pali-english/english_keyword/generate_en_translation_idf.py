@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-generate_termbase.py
+generate_en_translation_idf.py
 ====================
 Reads one or more markdown translation files, computes TF-IDF against the
 Reuters-21578 general-English IDF corpus (idf_corpus.py), and writes:
@@ -13,18 +13,18 @@ Reuters-21578 general-English IDF corpus (idf_corpus.py), and writes:
 Usage
 -----
     # single file (default: Rhys Davids)
-    python3 generate_termbase.py
+    python3 generate_en_translation_idf.py
 
     # explicit single input
-    python3 generate_termbase.py --input 1-SOURCES/Translations/en-1-rhys_davids.md
+    python3 generate_en_translation_idf.py --input 1-SOURCES/Translations/en-1-rhys_davids.md
 
     # multiple inputs → individual reports + comparison
-    python3 generate_termbase.py \\
+    python3 generate_en_translation_idf.py \\
         --input 1-SOURCES/Translations/en-1-rhys_davids.md \\
                 1-SOURCES/Translations/en-2-another.md
 
     # custom output directory (all reports land here)
-    python3 generate_termbase.py --input a.md b.md --outdir scripts/output/run1
+    python3 generate_en_translation_idf.py --input a.md b.md --outdir scripts/output/run1
 """
 
 import re

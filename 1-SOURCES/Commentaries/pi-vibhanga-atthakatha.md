@@ -11,7 +11,6 @@ layer: atthakatha
 root_text: 1-SOURCES/Text/pi-2.md
 covers_verses: 2-1–2-1044
 copyright: Public domain
-license: CC0
 source_description: "Tipitaka.org Atthakatha/Tika edition export. Aṭṭhakathā > Abhidhammapiṭaka (aṭṭhakathā) > Vibhaṅga-aṭṭhakathā; 2346 segments in source. Cross-checked against the WeBuddhist backend copy. Backend record 'Sammohavinodanī-aṭṭhakathā (Commentary)'.
 source_filename: book/abh02a.att.html"
 source: "https://tipitaka.org/romn/cscd/abh02a.att.html"

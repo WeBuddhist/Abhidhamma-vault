@@ -2,38 +2,44 @@
 
 ## Audience
 
-Translators and terminology reviewers.
+**Translators and terminology reviewers** comparing renderings, auditing sense boundaries, and maintaining cross-document consistency.
+
+**Assume they:** read Pāli or work from aligned glosses, care about **sense-tag stability**, and need to see **doctrinal distinctions** exposed in English — not hidden by smoothing.
 
 ---
 
 ## Translation Goal
 
-Expose doctrinal distinctions as clearly as possible.
+Expose **doctrinal and lexical distinctions** as clearly as possible. English should make it obvious when the source uses different senses of the same lemma.
 
 ---
 
 ## Terminology
 
-Use the **Translation** column from `pali-english/audience_requirments/termbase/termbase-pi-1-audience_translation_study.md` exactly, keyed by **Sense Tag**.
+Expose lexical and doctrinal distinctions in English. For each doctrinal sense, pick **one** rendering and use **identical** wording across the whole text and all related documents.
 
-Every occurrence of the same Sense Tag must use the identical English wording, across the whole text and across all related documents.
+### Word-choice rules (translation study)
 
-Preserve distinctions between related terms — even when their Translations might otherwise look similar, keep their Sense Tags (and therefore their renderings) separate.
+| Rule | Do | Don't |
+| ---- | -- | ----- |
+| Distinctions | **Separate** Sense Tags even when English glosses look similar | Merge senses to sound natural |
+| Consistency | One rendering per Sense Tag, project-wide | Synonym rotation for style |
+| Lemma overlap | Same lemma, different senses → different renderings | One English word per lemma regardless of sense |
+| Literalness | Prefer stable, comparable renderings over idiomatic flow | Free paraphrase that obscures the Pāli structure |
 
-Examples:
+### Examples (distinct senses must stay distinct)
 
-* citta (`mind`, `thought_intention`) ≠ viññāṇa (`consciousness_aggregate`)
-* saṅkhāra (`volitional_formations`) ≠ saṅkhāra (`conditioned_phenomena`) — same lemma, distinct Sense Tags, distinct Canonical Translations ("formations" vs. "conditioned things")
-* vedanā (`feeling_aggregate`) ≠ sukha (pleasure — track separately if added to the termbase)
-* saññā ≠ paññā (not yet in the termbase — assign distinct Sense Tags and Canonical Translations before use, and reuse them consistently thereafter)
+* citta (`mind_heart`) ≠ viññāṇa (`awareness_consciousness`)
+* saṅkhāra (`mental_formation`) ≠ saṅkhāra (`condition_conditioned`) — same lemma, different senses, different renderings
+* vedanā (`pleasant_unpleasant`) ≠ sukha (`ease_comfort`) — track separately
+* saññā ≠ paññā — assign distinct renderings before use; never conflate
 
 ---
 
 ## Style
 
-* Technical
-* Consistent
-* Literal
+* **Technical**, **consistent**, **comparably literal**
+* Wording chosen for **auditability**, not devotional or pedagogical tone
 
 ---
 
@@ -45,7 +51,7 @@ None.
 
 ## Priority
 
-1. Terminological precision
-2. Consistency
-3. Accuracy
-4. Readability
+1. **Terminological precision**
+2. **Cross-text consistency**
+3. **Accuracy**
+4. **Readability** (lowest priority)

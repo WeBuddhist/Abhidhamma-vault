@@ -11,7 +11,6 @@ layer: tika
 root_text: 1-SOURCES/Text/pi-2.md
 covers_verses: 2-1–2-1044
 copyright: Public domain
-license: CC0
 source_description: "Tipitaka.org Atthakatha/Tika edition export. Ṭīkā > Abhidhammapiṭaka (ṭīkā) > Vibhaṅga-anuṭīkā; 1066 segments in source. Cross-checked against the WeBuddhist backend copy. Not a separate backend record: the anuṭīkā is the second half (CSCD paragraphs 1154-2219) of the backend's 'Vibhaṅga-mūlaṭīkā' record, which merges both sub-commentaries."
 source_filename: book/abh02t.tik.html
 source: "https://tipitaka.org/romn/cscd/abh02t.tik.html"
