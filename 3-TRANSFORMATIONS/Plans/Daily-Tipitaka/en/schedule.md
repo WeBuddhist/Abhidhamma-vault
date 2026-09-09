@@ -291,13 +291,17 @@ Full day-by-day detail lives in the source spreadsheet (`0-INBOX/ITCC_2026_Bodhg
 | Day | Date | Section | Verses |
 |---|---|---|---|
 | day-122 | 12 Sep (Sun) | 8. Sammappadhānavibhaṅgo | 390–412 |
-| day-123 | 13 Sep (Mon) | 8. Sammappadhānavibhaṅgo | 413–429 |
+| day-123 | 13 Sep (Mon) | 8. Sammappadhānavibhaṅgo | 413–430 |
+
+> ⚙️ **Boundary correction, 2026-09-09 — day-123/day-124.** As originally scheduled, day-123 ran 413–429 and day-124 ran 430–446. But `^2-430` is chapter 8's closing block — its last line is `Sammappadhānavibhaṅgo niṭṭhito.` — so `Iddhipādavibhaṅgo` actually begins at `^2-431`. day-124 therefore opened with the previous chapter's colophon. On Evan's direction the boundary was moved: **day-123 is now 413–430** (18 verses, closing on the colophon, as day-121 does for chapter 7) **and day-124 is now 431–446** (16 verses). Coverage stays contiguous and every day again sits inside one chapter. **The source spreadsheet (`0-INBOX/200 Days - ITCC_2026_Bodhgaya_Reading_Schedule - Day-by-Day.csv`) still carries the old split and needs the same edit.**
+>
+> ⚙️ **Boundary correction, 2026-09-09 — day-127/day-128.** The identical fault sat at the chapter 10/11 break: `^2-485` is chapter 10's closing block (`Bojjhaṅgavibhaṅgo niṭṭhito.`), but day-127 was scheduled 475–484 and day-128 opened at 485 under `11. Maggaṅgavibhaṅgo`. Corrected the same way on Evan's direction — **day-127 is now 475–485** (11 verses, finishing the chapter) **and day-128 is now 486–495** (10 verses). The source spreadsheet needs this edit too. These two were the only straddles among the 93 Book II days; every other chapter boundary is clean.
 
 ### Plan 14 — Days 124–125 · Analysis of the Bases of Power (14–15 Sep)
 
 | Day | Date | Section | Verses |
 |---|---|---|---|
-| day-124 | 14 Sep (Tue) | 9. Iddhipādavibhaṅgo | 430–446 |
+| day-124 | 14 Sep (Tue) | 9. Iddhipādavibhaṅgo | 431–446 |
 | day-125 | 15 Sep (Wed) | 9. Iddhipādavibhaṅgo | 447–465 |
 
 ### Plan 15 — Days 126–127 · Analysis of the Factors of Enlightenment (16–17 Sep)
@@ -305,13 +309,13 @@ Full day-by-day detail lives in the source spreadsheet (`0-INBOX/ITCC_2026_Bodhg
 | Day | Date | Section | Verses |
 |---|---|---|---|
 | day-126 | 16 Sep (Thu) | 10. Bojjhaṅgavibhaṅgo | 466–474 |
-| day-127 | 17 Sep (Fri) | 10. Bojjhaṅgavibhaṅgo | 475–484 |
+| day-127 | 17 Sep (Fri) | 10. Bojjhaṅgavibhaṅgo | 475–485 |
 
 ### Plan 16 — Days 128–129 · Analysis of the Path Factors (18–19 Sep)
 
 | Day | Date | Section | Verses |
 |---|---|---|---|
-| day-128 | 18 Sep (Sat) | 11. Maggaṅgavibhaṅgo | 485–495 |
+| day-128 | 18 Sep (Sat) | 11. Maggaṅgavibhaṅgo | 486–495 |
 | day-129 | 19 Sep (Sun) | 11. Maggaṅgavibhaṅgo | 496–507 |
 
 ### Plan 17 — Days 130–135 · Analysis of the Jhānas (20–25 Sep)
