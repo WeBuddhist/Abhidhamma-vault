@@ -1,0 +1,228 @@
+{
+  "sections": [
+    {
+      "title": {
+        "pi": "Abhidhammapiṭake"
+      },
+      "span": {
+        "start": 62,
+        "end": 131884
+      },
+      "subsections": [
+        {
+          "title": {
+            "pi": "Puggalapaññattipāḷi"
+          },
+          "span": {
+            "start": 81,
+            "end": 131884
+          },
+          "subsections": [
+            {
+              "title": {
+                "pi": "Mātikā"
+              },
+              "span": {
+                "start": 87,
+                "end": 12280
+              },
+              "subsections": [
+                {
+                  "title": {
+                    "pi": "Ekakauddeso"
+                  },
+                  "span": {
+                    "start": 98,
+                    "end": 2682
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Dukauddeso"
+                  },
+                  "span": {
+                    "start": 2692,
+                    "end": 3604
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Tikauddeso"
+                  },
+                  "span": {
+                    "start": 3614,
+                    "end": 5110
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Catukkauddeso"
+                  },
+                  "span": {
+                    "start": 5123,
+                    "end": 9201
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Pañcakauddeso"
+                  },
+                  "span": {
+                    "start": 9214,
+                    "end": 10506
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Chakkauddeso"
+                  },
+                  "span": {
+                    "start": 10518,
+                    "end": 11502
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Sattakauddeso"
+                  },
+                  "span": {
+                    "start": 11515,
+                    "end": 11890
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Aṭṭhakauddeso"
+                  },
+                  "span": {
+                    "start": 11903,
+                    "end": 11986
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Navakauddeso"
+                  },
+                  "span": {
+                    "start": 11998,
+                    "end": 12159
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Dasakauddeso"
+                  },
+                  "span": {
+                    "start": 12171,
+                    "end": 12280
+                  }
+                }
+              ]
+            },
+            {
+              "title": {
+                "pi": "Niddeso"
+              },
+              "span": {
+                "start": 12287,
+                "end": 131884
+              },
+              "subsections": [
+                {
+                  "title": {
+                    "pi": "Ekakapuggalapaññatti"
+                  },
+                  "span": {
+                    "start": 12307,
+                    "end": 23148
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Dukapuggalapaññatti"
+                  },
+                  "span": {
+                    "start": 23167,
+                    "end": 37708
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Tikapuggalapaññatti"
+                  },
+                  "span": {
+                    "start": 37727,
+                    "end": 62108
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Catukkapuggalapaññatti"
+                  },
+                  "span": {
+                    "start": 62130,
+                    "end": 111848
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Pañcakapuggalapaññatti"
+                  },
+                  "span": {
+                    "start": 111870,
+                    "end": 124176
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Chakkapuggalapaññatti"
+                  },
+                  "span": {
+                    "start": 124197,
+                    "end": 125316
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Sattakapuggalapaññatti"
+                  },
+                  "span": {
+                    "start": 125338,
+                    "end": 128815
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Aṭṭhakapuggalapaññatti"
+                  },
+                  "span": {
+                    "start": 128837,
+                    "end": 129218
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Navakapuggalapaññatti"
+                  },
+                  "span": {
+                    "start": 129239,
+                    "end": 131421
+                  }
+                },
+                {
+                  "title": {
+                    "pi": "Dasakapuggalapaññatti"
+                  },
+                  "span": {
+                    "start": 131442,
+                    "end": 131884
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

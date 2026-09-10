@@ -20,7 +20,7 @@ Apply block IDs to Pali Abhidhamma prose whose source prints paragraph numbers (
 |---|---|---|
 | `N. text…` at start of a content line | `N` is the content address | Any trailing `^old-id` |
 | `#` / `##` / `###` / `####` / `#####` title lines | Heading hierarchy + sibling counters | Any trailing `^old-id` |
-| Homage / plain lines before `#` | Pre-title blocks | — |
+| Homage / plain lines strictly before the file's first `#` heading of any level | Pre-title blocks (`^T-N`) | — |
 | Unnumbered continuation lines | Same block as the preceding `N.` | Do not invent a new `N` |
 
 Example (Dukamātikā):
@@ -71,7 +71,9 @@ N     = the printed leading number on that paragraph (never recomputed)
 
 **Which run is "principal"?** The one you want cheapest to cite — normally the main body, which is usually also the longest. It keeps the bare `^{book}-{N}` namespace. Every *other* run takes the next sequential Arabic label in document order (`1`, `2`, …). Because those labels are pure collision-breakers, they are assigned by position, not by what the run contains.
 
-**Why keep the body bare?** If the body is a single continuous counter, `^{book}-{N}` already cites it uniquely, and it is the text people cite most. Adding a redundant middle segment only lengthens the IDs that matter most.
+When a book's runs are all conceptually peer/co-equal sections (e.g. book 6's ten yamakas, or a book split into many resetting zones with no single run that dominates), prefer **uniform positional numbering for every run, including the first** (`^{book}-1-{N}`, `^{book}-2-{N}`, …) over carving out a bare-namespace exception for one of them. Reserve the bare-principal-run form for books that genuinely have one dominant body run and only incidental smaller runs elsewhere. This also keeps IDs reliably searchable/predictable across a whole book when the number of zones is large — a stated design goal for these files.
+
+**Why keep the body bare (when there is a real principal run)?** If the body is a single continuous counter, `^{book}-{N}` already cites it uniquely, and it is the text people cite most. Adding a redundant middle segment only lengthens the IDs that matter most.
 
 ### The `M` zone — a matrix that opens the book's first counter
 
@@ -89,6 +91,10 @@ Heading and content use the **same Roman label** for the same object — heading
 Body `###` numbering then starts at `1` **after** the `M` section (`### Cittuppādakaṇḍaṃ ^1-1-0`), since `M` occupies its own slot rather than a numeric one.
 
 **The test is counter behaviour, not the word "mātikā".** Matrices are common and recur throughout these books — book 1 has a second `#### Mātikā` inside Rūpakaṇḍaṃ, book 2 has 23 mātikā headings and *no* opening matrix at all, book 3 has five inside its `Uddesa`. None of those get `M`, because none of them starts the first counter: their numbers continue the surrounding run, so they are ordinary content under ordinary zones. Only a matrix that **opens** the book's numbering qualifies.
+
+### Splitting one detected run into two zones at a chosen heading
+
+Sometimes the printed numbers never reset at a real structural boundary — e.g. book 7's `paccayuddesa` / `paccayaniddesa` / `Pucchāvāro` runs straight into `1. Kusalattikaṃ`'s own exposition with no reset back to `1` (items 1–52 are the shared front matter, item 53 onward is Kusalattikaṃ's, but both are one auto-detected run). When a heading boundary like this clearly separates two conceptually distinct zones despite no number reset, split the run manually at that heading: everything before it becomes one zone, everything from it onward becomes the next, each keeping its own copy of the printed `N` verbatim. `apply.py`'s automatic run detection (reset-to-1 only) cannot do this split by itself — it has to be done by re-partitioning that run's item list at the chosen line before assigning zone labels.
 
 ### Duplicate printed `N` within one run
 
@@ -119,12 +125,15 @@ Classify the gap first:
 
 | Role | ID |
 |---|---|
-| Homage / pre-`#` (outside any numbering run) | `^T-1`, `^T-2`… — Step 4, **not** `U` |
+| Homage / any plain content **strictly before the file's first `#` heading of any level** | `^T-1`, `^T-2`… — Step 4, **not** `U` |
+| Unnumbered content that falls **after** the first heading but **before the first numbering run starts** (e.g. an enumeration list under an intro subheading, before the body's own `1.` begins) | `^{book}-U{k}` — same treatment and same global counter as unnumbered blocks inside a run, **not** `^T-N` |
 | Numbered block in a non-principal run | usual zone label from Step C (`^{book}-{zone}-{N}`) |
 | Continuation of the previous `N.` (same verse) | merge into that block; one ID on the last line |
-| Standalone unnumbered **body** segment | `^{book}-U{k}` |
+| Standalone unnumbered **body** segment (inside a run) | `^{book}-U{k}` |
 
-`U` means Unnumbered. Number `k` in **document order** across the whole file (every standalone unnumbered body block that sits inside a numbering run):
+`T-N` is reserved **only** for content that sits before the very first heading in the file — typically just the homage line (`Namo tassa…`). It is not a catch-all for "anything before the numbering starts": a book can have headings, sub-headings, and even whole unnumbered paragraphs (like an intro's enumeration list) before its first `N.` run begins, and none of that is pre-title. Once the file has its first heading, every subsequent stray unnumbered block is ordinary `U`-territory, whether or not a numbering run has technically started yet.
+
+`U` means Unnumbered. Number `k` in **document order** across the **whole file** — this includes both the pre-run stray blocks described above and every standalone unnumbered block inside any run:
 
 ```text
 ^{book}-U1
@@ -136,16 +145,17 @@ Examples (`book=1`): `^1-U1`, `^1-U2`.
 
 Prefer merging intro/outro lines into the adjacent numbered verse when they clearly belong to it. Use `U` only when the block must remain separate. Do **not** use `x` here (`x` = duplicate printed `N.` only). Do **not** use `^1-0U1` (collides conceptually with heading `^1-0`).
 
-`apply.py` assigns `^{book}-U{k}` automatically to unnumbered content blocks **inside** a numbering run. Stray blocks before the first run are left for Step 4 (`^T-N`).
+`apply.py` assigns `^{book}-U{k}` automatically to unnumbered content blocks **inside** a numbering run, and reports pre-first-run stray blocks separately in its audit output; the LLM must classify each stray block by the table above (pre-title → `T-N`, everything else → `U{k}` continuing the same global counter, positioned in its correct document-order slot before the in-run U-blocks that follow it).
 
 ### Step D — check your work
 
 After labeling, verify:
 
 - If there is only one run in the file, content IDs are `^{book}-{N}` with **no** middle segment.
-- If there are several runs, the principal run stays bare and every other run has its own sequential Arabic middle segment (`1`, `2`, …) in document order; no two share a label.
+- If there are several runs, either the principal run stays bare and every other run has its own sequential Arabic middle segment (`1`, `2`, …) in document order, **or** — when the runs are conceptually peer/co-equal and searchability across many zones matters more than a shorter body ID — every run including the first gets a positional label; no two runs share a label either way.
 - Repeated printed `N` in one run → first `…-{N}`, then `…-{N}x1`, `…-{N}x2`, …
 - Standalone unnumbered body blocks inside a run → `^{book}-U1`, `^{book}-U2`, … (not `^T-N`)
+- Stray unnumbered blocks after the title but before the first run → also `^{book}-U{k}` (not `^T-N`); only content before the very first heading is `^T-N`.
 - No content ID exceeds 3 hyphen-separated segments; headings may be longer and end in `-0` (except `^0`, `^T-N`). The `xK` / `U{k}` markers sit on the last segment (`5x1`, `U1`), not as an extra hyphen part.
 - Stripped `N.` prefixes; ID on the last line of each numbered block.
 
@@ -202,19 +212,19 @@ Helper: `apply.py` next to this `SKILL.md`.
 python "<this-skill-dir>/apply.py" audit "<path-to-file.md>"
 ```
 
-Prints (no writes): detected `book`, each numbering run (lines, `first→last`, heading candidates), anomalies (non-sequential jumps that are not a clean reset to `1`).
+Prints (no writes): detected `book`, each numbering run (lines, `first→last`, heading candidates), anomalies (non-sequential jumps that are not a clean reset to `1`), and any stray unnumbered blocks found before the first run.
 
 **Ignore existing `^` IDs** when judging structure — treat them as noise to be stripped on apply.
+
+**Also check for corrupted legacy IDs** before trusting any automatic stripping: some older sources use a lettering scheme that overflows past `z` into punctuation or control characters (e.g. `{`, `|`, `}`, `~`, `\xa0`, `\x7f`–`\x81`). A strict `\^[\w-]+\s*$` stripper silently fails to match these, leaving the stale ID in place and appending the new one after it, producing a line with two IDs. Scan for lines with more than one `^` after applying, and for any pre-apply line whose trailing `^`-token isn't fully `[\w-]` — strip those with a tolerant "caret to end of line" regex instead before running Step 3.
 
 ### 2 — Confirm runs and assign labels (follow Step C)
 
 For each audited run:
 
-1. Confirm the boundary is a real restart (not OCR / interpolation).
-2. Decide which run is **principal** (normally the main body — the longest, most-cited run).
-3. Choose `--zones` label from Step C:
-   - Principal run → **empty** label (`3=` or `1=`) so content is `^{book}-{N}`
-   - Every other run → `1`, `2`, … in document order
+1. Confirm the boundary is a real restart (not OCR / interpolation), or identify a heading-boundary split that the numbers themselves don't show (see "Splitting one detected run into two zones" above).
+2. Decide whether one run is genuinely **principal** (bare `^{book}-{N}`) or whether the book's runs are peer/co-equal and should all get positional labels including the first (see Step C).
+3. Choose `--zones` label from Step C accordingly.
 
 ### 3 — Apply content IDs
 
@@ -224,21 +234,24 @@ python "<this-skill-dir>/apply.py" apply "<path>" --zones "1=1@25,2=2@116,3=@588
 
 # Entire file is one run → empty label
 python "<this-skill-dir>/apply.py" apply "<path>" --zones "1="
+
+# All runs peer/co-equal → every run gets a positional label, none bare
+python "<this-skill-dir>/apply.py" apply "<path>" --zones "1=1,2=2,3=3"
 ```
 
 `--zones "K=LABEL"` maps audit run index `K` → middle segment `LABEL`. Empty `LABEL` (`K=` or `K=@line`) yields `^{book}-{N}`.
 
-The script strips all existing `^` IDs, tags numbered paragraphs, strips `N.` prefixes, normalises blanks. It may put a temporary ID on the chosen run-opening heading; Step 4 replaces heading IDs fully.
+The script strips all existing `^` IDs, tags numbered paragraphs, strips `N.` prefixes, normalises blanks. It may put a temporary ID on the chosen run-opening heading; Step 4 replaces heading IDs fully. When a run must be split at a heading with no number reset, or a book needs more zones than `--zones` can express cleanly (dozens of runs), write a short custom script that reuses `apply.py`'s `detect_runs`/`content_id`/`strip_id` helpers directly rather than fighting the CLI.
 
 ### 4 — Headings + leftovers
 
-1. Pre-title → `^T-N`
+1. Content strictly before the file's first `#` heading of any level → `^T-N`
 2. `#` → `^0`; `##` → `^{book}-0`
 3. Every `###`/`####`/`#####` → hierarchical IDs by sibling position under each parent (one continuous `###` counter across the whole book)
-4. Fix anomaly paragraphs the script skipped (e.g. `N.` not on the first line of a blank-line block)
-5. Pre-title stray unnumbered blocks → `^T-N` (script does not assign `U` outside runs)
+4. Fix anomaly paragraphs the script skipped (e.g. `N.` not on the first line of a blank-line block — check whether the true numbered line is buried on a later line of the same block; if so, split the block with a blank line before re-running Step 3)
+5. Any other stray unnumbered blocks — i.e. ones that come after the first heading but before the first numbering run — get `^{book}-U{k}` (same global counter as in-run `U` blocks), **not** `^T-N`
 
-Confirm: no bare headings; every leading `N.` has a content ID; standalone unnumbered body blocks have `U{k}`; no content ID exceeds 3 hyphen segments.
+Confirm: no bare headings; every leading `N.` has a content ID; standalone unnumbered body blocks have `U{k}`; no content ID exceeds 3 hyphen segments; `T-N` appears only on content before the very first heading.
 
 ---
 
@@ -247,46 +260,25 @@ Confirm: no bare headings; every leading `N.` has a content ID; standalone unnum
 - **DO** derive structure from headings + leading `N.` only — strip and ignore legacy `^` IDs.
 - **DO** copy `N` verbatim into the last segment of the content ID.
 - **DO** when the same printed `N` appears again in the same run, keep the first as `…-{N}` and use `…-{N}x1`, `…-{N}x2`, … for later copies.
-- **DO** give standalone unnumbered body segments `^{book}-U{k}` (`U` = Unnumbered); keep homage as `^T-N`.
+- **DO** give standalone unnumbered body segments `^{book}-U{k}` (`U` = Unnumbered); reserve `^T-N` for content strictly before the file's first heading (normally just the homage line).
 - **DO** start a new run only when the printed number resets to `1` (or at the first number in the file).
 - **DON'T** start a new run at every heading — gocchakas and kaṇḍas often sit inside one run.
 - **DON'T** classify runs by genre or position — the zone is a collision-breaker only, never a claim that content is "matrix", "intro" or "front matter".
-- **DO** give the principal (normally body) run the bare `^{book}-{N}` namespace; label every other run `1`, `2`, … in document order.
+- **DO** give the principal (normally body) run the bare `^{book}-{N}` namespace when one genuinely dominates; label every other run `1`, `2`, … in document order. When runs are peer/co-equal, label all of them positionally instead (no bare exception).
 - **DO** collapse a **sole** run to `^{book}-{N}` — no middle segment at all.
 - **DO** ID every heading; headings may be longer than 3 segments and are numbered by sibling position, independently of content zones.
+- **DON'T** treat "before the first numbered run" as equivalent to "pre-title" — only content before the very first heading is pre-title; everything else unnumbered is `U`-territory.
 - **DON'T** assign IDs to `![[...]]` transclusions.
 - **DO** collapse multiple blank lines to one before parsing blocks.
+- **DO** proactively scan for corrupted/overflowed legacy IDs (non-`[\w-]` characters right after a `^`) before stripping, especially in older or heavily-edited source files — a strict stripper can silently leave stale IDs in place.
 
 ---
 
-## Open design notes — deep combinatorial books (e.g. Paṭṭhāna / book 7)
+## Book 7 (Paṭṭhānapāḷi) — resolved design notes
 
-**Status: provisional, not implemented.** `pi-7.md` does not exist in this workspace yet. Everything below comes from reasoning about a pasted outline/excerpt, not a real audit — treat it as a starting proposal to revisit once the actual file is available, not as a rule to apply.
+Book 7 exists in the workspace and has been fully processed. What was previously an open, provisional design question is now settled by real content:
 
-### The core problem this book exposes
-
-Book 7 is what forced the Step B rewrite above (zone = collision-breaker, never a genre or position claim). Its `paccayuddesa` / `paccayaniddesa` / `Pucchāvāro` → `1. Kusalattikaṃ` boundary is the clearest case: the printed numbers never reset there. `Pucchāvāro` ends and `Kusalattikaṃ`'s own exposition begins at `53` with no reset back to `1`. Any scheme that tried to call the first stretch "front matter" and the second "body" would have to invent a boundary the numbering simply doesn't contain. Every tika *after* Kusalattikaṃ (`2. Vedanāttikaṃ` onward) does reset cleanly, confirming this is a one-off fusion at the very first tika, not a general pattern.
-
-This means the zone boundary here cannot be found by reset-detection alone (which is all `apply.py` currently does) — it has to be a manual decision made at a heading, overriding what the numbers alone would suggest. This skill doesn't currently have a mechanism for "split one auto-detected run into two zones at a chosen heading with no number reset between them."
-
-### Proposed middle-zone vocabulary for this book (unconfirmed against real content)
-
-Book 7 is the one place where plain sequential zone labels may not be enough: it has hundreds of resets, and its own structure already supplies stable indices worth reusing rather than recounting. This is the sole anticipated exception to Step C's "sequential Arabic in document order" rule, and it should not be generalised to other books.
-
-| Content | Proposed zone | Example |
-|---|---|---|
-| `paccayuddesa` + `paccayaniddesa` + `Pucchāvāro` (one continuous run) | sequential label per Step C | `^7-1-1` … `^7-1-24` … `^7-1-25`… |
-| `1. Kusalattikaṃ` (numerically fused to the previous run, no reset) | `T1` — **manual override, not detectable from resets** | `^7-T1-53`, `^7-T1-54`… (N stays verbatim even though the zone changed) |
-| Tikas 2–22, each a clean reset | `T{tika's own number}` | `^7-T2-1`… (Vedanāttikaṃ), `^7-T22-1`… |
-| Individual dukas (flat 1–100 numbering, each a clean reset) | `D{duka's own number}` | `^7-D1-…` (Hetuduka), `^7-D7-…` (Sappaccayaduka) |
-| Duka×tika cross-reference sections, duka-led heading order | `D{duka}T{tika}` (token order mirrors source's own heading order) | `7-1. Sappaccayaduka-kusalattikaṃ` → `^7-D7T1-…` |
-| Duka×tika cross-reference, tika-led heading order (reversed) | `T{tika}D{duka}` | `1-99. Kusalattika-sauttaradukaṃ` → `^7-T1D99-…` |
-| Deepest layer: 4 modes (Anuloma `A`, Paccanīya `P`, Anuloma-Paccanīya `AP`, Paccanīya-Anuloma `PA`) × 6 pairing types (`T`, `D`, `TT`, `DD`, `DT`, `TD`) | `{mode}{pairing}` stacked into one token | `Dhammapaccanīye dukatikapaṭṭhānaṃ` → zone `PDT` |
-
-The `D{n}`/`T{n}` markers exist so tika-zone and duka-zone numbers don't collide (both count independently from `1`).
-
-### Unresolved / needs the real file
-
-- The 12 "gocchaka" group headings (`1. Hetugocchakaṃ` … `12. Kilesagocchakaṃ`) are organizational only — they are **not** content zones themselves. The actual duka zones use each duka's flat 1–100 position, and only 14 of those 100 are confirmed from examples seen so far (`D1, D2, D7, D14, D20, D26, D44, D50, D55, D69, D75, D83, D99, D100`); the rest need the real duka list. `Cūḷantaradukaṃ` and `Mahantaradukaṃ` look like standalone single dukas (not groups) but their flat duka-number isn't derivable from outline position alone.
-- The 20 mode×pairing-type headers (`Dhammānulome tikatikapaṭṭhānaṃ` etc.) almost certainly contain their own internal reset structure underneath (quite possibly another full front-matter + resetting-tikas/dukas pattern, mirroring the book's outer shape) — a paragraph inside one of these would need a further nested zone dimension beyond a single token, which may exceed the 3-segment `book-zone-N` shape this skill otherwise holds to everywhere else. Not designable without real numbered content from inside one of these sections.
-- No `apply.py` changes have been made to support any of this (no manual run-splitting, no compound zone tokens beyond what `parse_zones` already accepts as an arbitrary label string). If this scheme is adopted, `apply.py`'s zone-to-heading assignment logic would need to support splitting a single detected run at a chosen line, which it cannot currently do.
+- The `paccayuddesa` / `paccayaniddesa` / `Pucchāvāro` → `1. Kusalattikaṃ` boundary (items 1–52 vs. 53 onward) has no number reset, so it was split manually at the `### Kusalattikaṃ` heading per "Splitting one detected run into two zones" above, producing 74 total zones from the audit's 73 auto-detected runs.
+- The book's runs are **peer/co-equal** (74 resetting sections, no single dominant body run), so it uses **plain sequential positional labels for every zone, including the first** (`^7-1-{N}` … `^7-74-{N}`) — no bare-principal exception. This was chosen specifically because it keeps every verse ID predictable and searchable across a very large number of zones, which matters more here than shortening the body's own IDs.
+- The previously proposed descriptive vocabulary (`T{n}` for tikas, `D{n}` for dukas, fused `D{duka}T{tika}` / `T{tika}D{duka}` cross-reference tokens, and `{mode}{pairing}` stacked tokens) was evaluated against the real file and rejected: it produces systemic collisions — e.g. `T1` (Kusalattikaṃ's own primary exposition) collides with `T1` used again for a tika-led cross-reference section, and several `D{n}` anchors are reused across three different structural layers (primary duka groups, duka-led cross-refs, tika-led cross-refs), producing up to triple collisions on the same token. Plain sequential zoning has no such collisions by construction.
+- Book 7 also surfaced two file-specific edge cases worth watching for in any future deeply-nested book: (a) a numbered item whose `N.` sits on a non-first line of its content block (an unnumbered intro/parenthetical line shares the block) — `apply.py`'s run-detector only checks the first line, so these get silently misclassified as unnumbered unless caught and split with a blank line first; (b) the legacy-ID overflow corruption described in the Workflow §1 audit note above, found in both book 6 and book 7.

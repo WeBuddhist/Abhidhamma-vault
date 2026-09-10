@@ -74,9 +74,16 @@ def format_verse(content: str, path, verse: int) -> str:
 
 
 _ws_re = re.compile(r"[ \t]+")
+# A run of whitespace immediately before sentence punctuation is a line-wrap
+# artifact from the source HTML (a tag boundary fell mid-sentence, right
+# before a comma/period/etc.), not an intentional space. Collapse it. This
+# does NOT touch space-separated dashes (" – ") or ellipses ("…"),
+# which are legitimate stand-alone separators in this content.
+_space_before_punct_re = re.compile(r"\s+([,.;:!?])")
 
 
 def clean_text(s: str) -> str:
     s = s.replace("\r\n", "\n").replace("\r", "\n")
     s = _ws_re.sub(" ", s)
+    s = _space_before_punct_re.sub(r"\1", s)
     return s.strip()

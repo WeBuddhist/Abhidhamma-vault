@@ -333,15 +333,49 @@ def convert_json_to_source_text(json_path, output_path) -> None:
 
 _book_id_re = re.compile(r"abh(\d+)m")
 
+# tipitaka.org splits the last five Abhidhamma books (Dhatukatha,
+# Puggalapannatti, Kathavatthu, Yamaka, Patthana) into one shared
+# 'abh03' source-file group, with a trailing part number distinguishing
+# them: abh03m1 = Dhatukatha, abh03m2 = Puggalapannatti, abh03m3 =
+# Kathavatthu, abh03m4-6 = Yamaka parts 1-3, abh03m7-11 = Patthana parts
+# 1-5. The generic 'abh(\d+)m' regex below cannot distinguish these —
+# it would derive book_id=3 for all eleven — so known multi-part source
+# IDs are looked up here first, per the book table in
+# 4-SYSTEM/Guidelines/block-id-spec.md §3. Yamaka and Patthana are each
+# ONE logical book split across several physical source files; all parts
+# of the same book share a book_id, and merging them into one continuous
+# pi-6.md / pi-7.md is a separate, later step — not done by this
+# converter, which emits one draft file per source file.
+_MULTI_PART_BOOK_ID = {
+    "abh03m1": 3,   # Dhatukathapali
+    "abh03m2": 4,   # Puggalapannattipali
+    "abh03m3": 5,   # Kathavatthupali
+    "abh03m4": 6,   # Yamakapali part 1
+    "abh03m5": 6,   # Yamakapali part 2
+    "abh03m6": 6,   # Yamakapali part 3
+    "abh03m7": 7,   # Patthanapali part 1
+    "abh03m8": 7,   # Patthanapali part 2
+    "abh03m9": 7,   # Patthanapali part 3
+    "abh03m10": 7,  # Patthanapali part 4
+    "abh03m11": 7,  # Patthanapali part 5
+}
+
 
 def _derive_book_id(source_filename, source_id) -> int:
     """Derive the book's position within the Abhidhamma pitaka from the
     source ID/filename. tipitaka.org uses abh01m, abh02m, … for the seven
-    Abhidhamma books."""
-    for s in (source_filename, source_id):
-        if not s:
-            continue
-        m = _book_id_re.search(str(s))
+    Abhidhamma books — except the last five, which share an 'abh03'
+    prefix with a part-number suffix; see _MULTI_PART_BOOK_ID above."""
+    multi_part_re = re.compile(r"abh03m(\d+)(?!\d)")
+    candidates = [str(s) for s in (source_filename, source_id) if s]
+    for s in candidates:
+        m = multi_part_re.search(s)
+        if m:
+            key = f"abh03m{m.group(1)}"
+            if key in _MULTI_PART_BOOK_ID:
+                return _MULTI_PART_BOOK_ID[key]
+    for s in candidates:
+        m = _book_id_re.search(s)
         if m:
             return int(m.group(1))
     return 1  # default
